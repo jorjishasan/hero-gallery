@@ -1,0 +1,24 @@
+.menu-list {
+  counter-reset: menu-counter 0;
+}
+
+.menu-item-container {
+  counter-increment: menu-counter;
+}
+
+.menu-item-container::before {
+  content: counter(menu-counter, decimal-leading-zero);
+  font-size: 0.8rem;
+  color: #93c5fd;
+  margin-right: 1.5rem;
+  font-weight: 600;
+  transform: translateY(-0.75rem);
+  opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  /* On mobile the panel takes 100% width, ensure layers cover full */
+  .lg\:w-\[clamp\(260px\,38vw\,420px\)\] {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-slate-900: #0f172a;
+  --font-sans: "Instrument Serif", "Geist Variable", ui-serif, serif;
+  --font-serif: "Instrument Serif", ui-serif, serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-slate-900);
+    color: white;
+    overflow: hidden;
+  }
+}
