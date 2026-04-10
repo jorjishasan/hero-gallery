@@ -1,27 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import Hls from "hls.js";
 import gsap from "gsap";
 
 const ROLES = ["Creative", "Fullstack", "Founder", "Scholar"];
 
+const HERO_VIDEO_PLAYBACK_RATE = 0.7;
+
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
   const [roleIndex, setRoleIndex] = useState(0);
-
-  // Background Video Setup
-  useEffect(() => {
-    const videoSource = "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8";
-    if (videoRef.current) {
-      if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(videoSource);
-        hls.attachMedia(videoRef.current);
-      } else if (videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
-        videoRef.current.src = videoSource;
-      }
-    }
-  }, []);
 
   // GSAP Entrance Animations
   useEffect(() => {
@@ -72,11 +58,14 @@ export default function Hero() {
       {/* Background Video Layer */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-bg">
         <video
-          ref={videoRef}
+          src="/hero_bg.mp4"
           autoPlay
           muted
           loop
           playsInline
+          onLoadedMetadata={(e) => {
+            e.currentTarget.playbackRate = HERO_VIDEO_PLAYBACK_RATE;
+          }}
           className="absolute top-1/2 left-1/2 min-w-full min-h-full -translate-x-1/2 -translate-y-1/2 object-cover"
         />
         {/* Overlays */}

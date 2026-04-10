@@ -1,24 +1,8 @@
 import { useEffect, useRef } from "react";
-import Hls from "hls.js";
 import gsap from "gsap";
 
 export default function Footer() {
-  const videoRef = useRef<HTMLVideoElement>(null);
   const marqueeRef = useRef<HTMLDivElement>(null);
-
-  // Background Video Setup
-  useEffect(() => {
-    const videoSource = "https://stream.mux.com/Aa02T7oM1wH5Mk5EEVDYhbZ1ChcdhRsS2m1NYyx4Ua1g.m3u8";
-    if (videoRef.current) {
-      if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(videoSource);
-        hls.attachMedia(videoRef.current);
-      } else if (videoRef.current.canPlayType("application/vnd.apple.mpegurl")) {
-        videoRef.current.src = videoSource;
-      }
-    }
-  }, []);
 
   // Marquee animation
   useEffect(() => {
@@ -44,7 +28,7 @@ export default function Footer() {
       {/* Background Video Layer */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
-          ref={videoRef}
+          src="/hero_bg.mp4"
           autoPlay
           muted
           loop
