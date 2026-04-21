@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Banger.Studio // The Ultimate Digital Experience",
+  title: "zeer.studio // ARCHIVE",
   description: "A premium design studio building high-end digital products, web3 platforms, and brand architectures.",
 };
 
