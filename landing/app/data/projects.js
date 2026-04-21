@@ -19,15 +19,16 @@ export const PROJECTS = [
     url: "https://orbis-nft-zeer.netlify.app/",
     description: "Premium NFT marketplace interface with fluid motion and surgical typography."
   },
+
   {
     id: 3,
-    slug: "sentinel",
-    title: "Sentinel AI",
+    slug: "prisma",
+    title: "Prisma Lab",
     tag: "AI",
-    index: "03",
-    asset: "/landing_assets/sentinel.gif",
-    url: "https://sentinelai-zeer.netlify.app/",
-    description: "High-performance intelligence dashboard featuring laboratory-grade aesthetics and data visualizations."
+    index: "08",
+    asset: "/landing_assets/prisma.gif",
+    url: "https://prismalab-zeer.netlify.app/",
+    description: "Advanced research laboratory for computer vision and generative AI models."
   },
   {
     id: 4,
@@ -39,6 +40,7 @@ export const PROJECTS = [
     url: "https://dremaio-zeer.netlify.app/",
     description: "Immersive product experience designed for next-generation digital interfaces."
   },
+
   {
     id: 5,
     slug: "sequa",
@@ -71,13 +73,13 @@ export const PROJECTS = [
   },
   {
     id: 8,
-    slug: "prisma",
-    title: "Prisma Lab",
+    slug: "sentinel",
+    title: "Sentinel AI",
     tag: "AI",
-    index: "08",
-    asset: "/landing_assets/prisma.gif",
-    url: "https://prismalab-zeer.netlify.app/",
-    description: "Advanced research laboratory for computer vision and generative AI models."
+    index: "03",
+    asset: "/landing_assets/sentinel.gif",
+    url: "https://sentinelai-zeer.netlify.app/",
+    description: "High-performance intelligence dashboard featuring laboratory-grade aesthetics and data visualizations."
   },
   {
     id: 9,
